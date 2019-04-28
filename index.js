@@ -34,10 +34,9 @@ var ZEvent = /** @class */ (function () {
             return;
         var notifier = this.map[key];
         if (!notifier) {
-            this.map[key] = new Notifier();
-            notifier = this.map[key];
-            notifier.on(cb);
+            notifier = this.map[key] = new Notifier();
         }
+        notifier.on(cb);
     };
     ;
     ZEvent.prototype.off = function (key, cb) {

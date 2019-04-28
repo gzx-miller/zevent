@@ -29,10 +29,9 @@ export class ZEvent {
         if (!key || !cb) return;
         let notifier = this.map[key];
         if (!notifier) {
-            this.map[key] = new Notifier(); 
-            notifier = this.map[key];
-            notifier.on(cb);
+            notifier = this.map[key] = new Notifier(); 
         }
+        notifier.on(cb);
     };
     off(key: string, cb: cbAnyArray) {
         if (!key || !cb) return;
