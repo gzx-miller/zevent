@@ -1,12 +1,13 @@
 # zevent
 very clear and  high performance event 
-
 This is a clean and high performance event.
 
+```Bash
 1. npm install zevent
 2. write code refer to the ./exampl/test.js.
-
-`let { ZEvent } = require('../index');
+```
+```Javascript
+let { ZEvent } = require('../index');
 
 let ev1 = "ev-1";
 let onEv1 = (a, b)=>{
@@ -27,5 +28,6 @@ setTimeout(() => {
 
     console.log("event send: ev-1 456, def");
     event.send(ev1, 456, "def");
-}, 200);`
+}, 200);
+```
 
